@@ -4,6 +4,6 @@ While attempting to improve my knowledge of computer science fundamentals by sol
 
 Below, are some breif explanations of the toy problems I have chosen to tackle as well as some info on my chosen approach to solve the problem and how that has impacted the time of space efficiency of the algorithm. 
 
-#First Unique Character 
+# First Unique Character 
 
 TBC 
