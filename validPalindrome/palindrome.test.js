@@ -1,5 +1,4 @@
-const imports = require("./app.js");
-console.log(imports);
+const imports = require("./palindrome.js");
 const { f, i, i2 } = imports;
 
 test("testing anagram that should pass(unsanitised input)", () => {
@@ -7,5 +6,5 @@ test("testing anagram that should pass(unsanitised input)", () => {
 });
 
 test("testing anagram that should fail(unsanitised input)", () => {
-  expect(f(i2).toBe(false));
+  expect(f(i2)).toBe(false);
 });
