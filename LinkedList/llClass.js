@@ -4,7 +4,11 @@ class LinkedList {
     this.length = 0;
   }
 
-  insertAtHead() {}
+  insertAtHead(newVal) {
+    const newNode = new Node(newVal, this.head);
+    this.head = newNode;
+    this.length++;
+  }
 }
 
 class Node {
