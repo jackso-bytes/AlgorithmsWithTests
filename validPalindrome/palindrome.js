@@ -5,12 +5,12 @@ const fail = "hahhaaf";
 
 const fun = (input) => {
   //sanitise the input
-  const san = input.replace(/[^0-9a-z]/gi, "").toLowerCase();
+  input = input.replace(/[^0-9a-z]/gi, "").toLowerCase();
   //use dual pointers to check equality of chars
   let left = 0;
-  let right = san.length - 1;
+  let right = input.length - 1;
   while (left < right) {
-    if (san[left] !== san[right]) return false;
+    if (input[left] !== input[right]) return false;
     left++;
     right--;
   }
