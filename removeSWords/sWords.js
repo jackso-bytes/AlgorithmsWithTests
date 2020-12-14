@@ -8,5 +8,4 @@ console.log(sWords(inputs));
 
 module.exports = {
   f: sWords,
-  i,
 };
