@@ -16,7 +16,8 @@
     "url": "https://github.com/Tom0901/AlgorithmsWithTests/issues"
   },
   "homepage": "https://github.com/Tom0901/AlgorithmsWithTests#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "jest": "^26.6.3"
   }
 }
