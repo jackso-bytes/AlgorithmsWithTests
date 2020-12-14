@@ -15,5 +15,6 @@ test("f removes words regardless of case", () => {
 
 test("f leaves words that don't begin with s", () => {
   const i = ["sinatra", "weird", "curious"];
-  expect(f(i)).toContain(["weird", "curious"]);
+  expect(f(i)).toContain("weird");
+  expect(f(i)).toContain("curious");
 });
