@@ -54,4 +54,21 @@ describe("#getByIndex", () => {
       expect(ll.getByIndex(2).value).toBe(30);
     });
   });
+
+  describe("#insertAtIndex", () => {
+    test("returns null when i > range", () => {
+      const ll = LinkedList.fromValues(10, 20, 30);
+      expect(ll.insertAtIndex(4)).toBeNull();
+    });
+
+    test("return null when i < 0", () => {
+      const ll = LinkedList.fromValues(10, 20);
+      expect(ll.insertAtIndex(-1)).toBeNull();
+    });
+
+    test("return correct no at valid index", () => {
+      const ll = LinkedList.fromValues(10, 20, 30, 40);
+      expect(ll.insertAtIndex(1).value).toBe(20);
+    });
+  });
 });

@@ -19,6 +19,7 @@ class LinkedList {
     }
     return current;
   }
+  insertAtIndex(index) {}
 }
 
 class Node {

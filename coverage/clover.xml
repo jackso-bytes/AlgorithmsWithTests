@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1608046399079" clover="3.2.0">
-  <project timestamp="1608046399080" name="All files">
-    <metrics statements="18" coveredstatements="18" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5" elements="27" coveredelements="27" complexity="0" loc="18" ncloc="18" packages="1" files="1" classes="1"/>
+<coverage generated="1608047031433" clover="3.2.0">
+  <project timestamp="1608047031434" name="All files">
+    <metrics statements="18" coveredstatements="18" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6" elements="28" coveredelements="28" complexity="0" loc="18" ncloc="18" packages="1" files="1" classes="1"/>
     <file name="llClass.js" path="C:\Users\Tom\Documents\websites and projects\toy problems\algorithmsWithTests\LinkedList\llClass.js">
-      <metrics statements="18" coveredstatements="18" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
-      <line num="3" count="6" type="stmt"/>
-      <line num="4" count="6" type="stmt"/>
-      <line num="8" count="15" type="stmt"/>
-      <line num="9" count="15" type="stmt"/>
-      <line num="10" count="15" type="stmt"/>
+      <metrics statements="18" coveredstatements="18" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
+      <line num="3" count="9" type="stmt"/>
+      <line num="4" count="9" type="stmt"/>
+      <line num="8" count="24" type="stmt"/>
+      <line num="9" count="24" type="stmt"/>
+      <line num="10" count="24" type="stmt"/>
       <line num="14" count="6" type="cond" truecount="4" falsecount="0"/>
       <line num="15" count="4" type="stmt"/>
       <line num="17" count="4" type="stmt"/>
       <line num="18" count="6" type="stmt"/>
       <line num="20" count="4" type="stmt"/>
-      <line num="26" count="15" type="stmt"/>
-      <line num="27" count="15" type="stmt"/>
-      <line num="31" count="1" type="stmt"/>
-      <line num="32" count="5" type="stmt"/>
-      <line num="33" count="5" type="stmt"/>
-      <line num="34" count="13" type="stmt"/>
-      <line num="36" count="5" type="stmt"/>
-      <line num="39" count="1" type="stmt"/>
+      <line num="27" count="24" type="stmt"/>
+      <line num="28" count="24" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="33" count="8" type="stmt"/>
+      <line num="34" count="8" type="stmt"/>
+      <line num="35" count="22" type="stmt"/>
+      <line num="37" count="8" type="stmt"/>
+      <line num="40" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
