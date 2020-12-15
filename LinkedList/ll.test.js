@@ -45,4 +45,13 @@ describe("#getByIndex", () => {
       expect(ll.getByIndex(2).value).toBe(30);
     });
   });
+
+  describe("check LL isn't manipulated by method", () => {
+    test("ll, is still in tact after running #getByIndex", () => {
+      const ll = LinkedList.fromValues(10, 20, 30);
+
+      expect(ll.getByIndex(2).value).toBe(30);
+      expect(ll.getByIndex(2).value).toBe(30);
+    });
+  });
 });
