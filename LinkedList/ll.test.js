@@ -100,6 +100,7 @@ describe("#getByIndex", () => {
 
       expect(ll.deleteAtIndex(6)).toBeNull();
     });
+
     test("if node deleted, ll intact and length updated", () => {
       const ll = LinkedList.fromValues(10, 20, 30, 40);
 
@@ -108,6 +109,17 @@ describe("#getByIndex", () => {
       expect(ll.length).toBe(3);
       expect(ll.getByIndex(1).value).toBe(30);
       expect(ll.getByIndex(1).next.value).toBe(40);
+    });
+
+    test("if index 0 passed call deleteAtHead for efficiency", () => {
+      const ll = LinkedList.fromValues(10, 20, 30, 40);
+
+      ll.deleteAtIndex(0);
+
+      expect(ll.length).toBe(3);
+      expect(ll.head.value).toBe(20);
+      expect(ll.head.next.value).toBe(30);
+      expect(ll.deleteAtHead.toHaveBeenCalledTimes(1));
     });
   });
 
