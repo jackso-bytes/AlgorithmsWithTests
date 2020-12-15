@@ -32,7 +32,7 @@ class LinkedList {
   deleteAtIndex(index) {
     if (index < 0 || index > this.length - 1) return null;
     let previous = this.getByIndex(index - 1);
-    let current = this.getByIndex(index);
+    let current = previous.next;
 
     previous.next = current.next;
     current.next = null;
