@@ -90,18 +90,18 @@ describe("#getByIndex", () => {
 
   describe("#deleteAtIndex", () => {
     test("if i < 0 return null", () => {
-      const ll = new LinkedList.fromValues(10, 20, 30, 40);
+      const ll = LinkedList.fromValues(10, 20, 30, 40);
 
       expect(ll.deleteAtIndex(-1)).toBeNull();
     });
 
     test("expect i > ll.length to be null", () => {
-      const ll = new LinkedList.fromValues(10, 20, 30, 40);
+      const ll = LinkedList.fromValues(10, 20, 30, 40);
 
       expect(ll.deleteAtIndex(6)).toBeNull();
     });
-    test("if node deleted and length updated", () => {
-      const ll = new LinkedList.fromValues(10, 20, 30, 40);
+    test("if node deleted, ll intact and length updated", () => {
+      const ll = LinkedList.fromValues(10, 20, 30, 40);
 
       ll.deleteAtIndex(1);
 
