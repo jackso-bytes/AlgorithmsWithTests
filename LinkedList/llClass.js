@@ -21,6 +21,7 @@ class LinkedList {
   }
   insertAtIndex(index, val) {
     if (index < 0 || index > this.length - 1) return null;
+    if (index === 0) return this.insertAtHead(val);
     let current = this.head;
     let newNext;
     for (let i = 0; i <= index - 1; i++) {

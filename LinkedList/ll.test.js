@@ -77,5 +77,14 @@ describe("#getByIndex", () => {
       expect(ll.insertAtIndex(3, 40).value).toBe(40);
       expect(ll.length).toBe(5);
     });
+
+    test("first index selected should call #insertAtHead for time complexity gains", () => {
+      const ll = LinkedList.fromValues(10, 20);
+      ll.insertAtIndex(0, 30);
+
+      expect(ll.head.value).toBe(30);
+      expect(ll.head.next.value).toBe(10);
+      expect(ll.length).toBe(3);
+    });
   });
 });
