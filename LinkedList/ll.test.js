@@ -87,4 +87,27 @@ describe("#getByIndex", () => {
       expect(ll.length).toBe(3);
     });
   });
+
+  describe("#deleteAtIndex", () => {
+    test("if i < 0 return null", () => {
+      const ll = new LinkedList.fromValues(10, 20, 30, 40);
+
+      expect(ll.deleteAtIndex(-1)).toBeNull();
+    });
+
+    test("expect i > ll.length to be null", () => {
+      const ll = new LinkedList.fromValues(10, 20, 30, 40);
+
+      expect(ll.deleteAtIndex(6)).toBeNull();
+    });
+    test("if node deleted and length updated", () => {
+      const ll = new LinkedList.fromValues(10, 20, 30, 40);
+
+      ll.deleteAtIndex(1);
+
+      expect(ll.length).toBe(3);
+      expect(ll.getByIndex(1).value).toBe(30);
+      expect(ll.getByIndex(1).next.value).toBe(40);
+    });
+  });
 });
