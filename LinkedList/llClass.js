@@ -40,7 +40,13 @@ class LinkedList {
     this.length--;
   }
 
-  deleteAtHead() {}
+  deleteAtHead() {
+    let newHead = this.head.next;
+    this.head.next = null;
+    this.head = newHead;
+
+    this.length--;
+  }
 }
 
 class Node {
