@@ -69,6 +69,13 @@ describe("#getByIndex", () => {
     test("return correct no at valid index", () => {
       const ll = LinkedList.fromValues(10, 20, 30, 40);
       expect(ll.insertAtIndex(1, 20).value).toBe(20);
+      expect(ll.length).toBe(5);
+    });
+
+    test("edge case that last possible index is selected", () => {
+      const ll = LinkedList.fromValues(10, 20, 30, 40);
+      expect(ll.insertAtIndex(3, 40).value).toBe(40);
+      expect(ll.length).toBe(5);
     });
   });
 });
