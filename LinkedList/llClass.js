@@ -9,6 +9,8 @@ class LinkedList {
     this.head = newNode;
     this.length++;
   }
+
+  getByIndex(index) {}
 }
 
 class Node {
@@ -17,5 +19,13 @@ class Node {
     this.next = next;
   }
 }
+
+LinkedList.fromValues = (...values) => {
+  const ll = new LinkedList();
+  for (let i = values.length - 1; i >= 0; i--) {
+    ll.insertAtHead(values[i]);
+  }
+  return ll;
+};
 
 module.exports = LinkedList;
