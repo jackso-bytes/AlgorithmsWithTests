@@ -29,6 +29,7 @@ class LinkedList {
     newNext = current.next;
     const nn = new Node(val, newNext);
     current.next = nn;
+    this.length++;
     return nn;
   }
 }
