@@ -19,7 +19,9 @@ class LinkedList {
     }
     return current;
   }
-  insertAtIndex(index) {}
+  insertAtIndex(index, val) {
+    if (index < 0 || index > this.length - 1) return null;
+  }
 }
 
 class Node {
