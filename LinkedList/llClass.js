@@ -39,6 +39,8 @@ class LinkedList {
 
     this.length--;
   }
+
+  deleteAtHead() {}
 }
 
 class Node {

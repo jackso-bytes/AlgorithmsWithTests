@@ -110,4 +110,14 @@ describe("#getByIndex", () => {
       expect(ll.getByIndex(1).next.value).toBe(40);
     });
   });
+
+  describe("deleteAtHead", () => {
+    const ll = LinkedList.fromValues(10, 20, 30, 40);
+
+    ll.deleteAtHead();
+
+    expect(ll.length).toBe(3);
+    expect(ll.head.value).toBe(20);
+    expect(ll.head.next.value).toBe(30);
+  });
 });
