@@ -28,6 +28,17 @@ class LinkedList {
     this.length++;
     return nn;
   }
+
+  deleteAtIndex(index) {
+    if (index < 0 || index > this.length - 1) return null;
+    let previous = this.getByIndex(index - 1);
+    let current = this.getByIndex(index);
+
+    previous.next = current.next;
+    current.next = null;
+
+    this.length--;
+  }
 }
 
 class Node {
