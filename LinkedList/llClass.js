@@ -10,7 +10,9 @@ class LinkedList {
     this.length++;
   }
 
-  getByIndex(index) {}
+  getByIndex(index) {
+    if (index < 0 || index > this.length) return null;
+  }
 }
 
 class Node {
