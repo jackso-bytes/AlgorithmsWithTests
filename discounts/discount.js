@@ -13,14 +13,15 @@ class Discount {
       return "You must call #main with an array of objects";
 
     let priceFl = getPrice(input.price);
+    let quantFl = this.getPrice(input.quantity);
   }
 
   getPrice(price) {
     if (typeof price !== "string") return null;
     let regex = /\d/g;
     if (regex.test(price) !== true) return null;
-    let p = price.split("£")[1];
-    return parseFloat(p);
+    price = price.replace(/[^0-9.]/g, "");
+    return parseFloat(price);
   }
 
   applyDiscount(price, quantity, discount) {
