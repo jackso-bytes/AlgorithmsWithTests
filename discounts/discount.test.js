@@ -36,7 +36,13 @@ describe("#getPrice", () => {
     expect(methods.getPrice({ key: "£20" })).toBe(null);
   });
 
-  test("returns correct value as a float", () => {
+  test("returns correct val as a float to", () => {
     expect(methods.getPrice("£30")).toBe(30);
+    expect(methods.getPrice("£40.50")).toBe(40.5);
+  });
+
+  test("return correct val if any string with numeric chars is passed", () => {
+    expect(methods.getPrice("30")).toBe(30);
+    expect(methods.getPrice("the price is 30.50")).toBe(30.5);
   });
 });
