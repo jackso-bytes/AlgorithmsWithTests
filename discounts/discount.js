@@ -12,10 +12,14 @@ class Discount {
     if (input[0] === undefined)
       return "You must call #main with an array of objects";
 
-    let priceFl = getPrice(input.price);
-    let quantFl = this.getPrice(input.quantity);
+    let finalPrice = 0;
+    input.forEach((item) => {
+      let priceFl = this.getPrice(item.price);
+      console.log(priceFl, item.quantity, item.discount);
+      finalPrice += this.applyDiscount(priceFl, item.quantity, item.discount);
+    });
 
-    let finalPrice = this.applyDiscount(priceFl, quantFl, input.discount);
+    return finalPrice;
   }
 
   getPrice(price) {
