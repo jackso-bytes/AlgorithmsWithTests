@@ -22,9 +22,9 @@ describe("#Main", () => {
     );
   });
 
-  /*test("are final prices correct?", () => {
-    expect(methods.main(i)).toBe("£155");
-  });*/
+  test("are final prices correct?", () => {
+    expect(methods.main(i)).toBe(155);
+  });
 });
 
 describe("#getPrice", () => {
@@ -55,10 +55,12 @@ describe("tests for #applyDiscount", () => {
     expect(methods.applyDiscount(50, 1, "2 for 45")).toBe(50);
     expect(methods.applyDiscount(50, 0, "2 for 45")).toBe(0);
     expect(methods.applyDiscount(50, 4, "2 for 45")).toBe(90);
+    expect(methods.applyDiscount(50, 5, "2 for 45")).toBe(140);
 
     expect(methods.applyDiscount(50, 3, "3 for 100")).toBe(100);
     expect(methods.applyDiscount(50, 1, "3 for 100")).toBe(50);
     expect(methods.applyDiscount(50, 0, "3 for 100")).toBe(0);
     expect(methods.applyDiscount(50, 6, "3 for 100")).toBe(200);
+    expect(methods.applyDiscount(50, 7, "3 for 100")).toBe(250);
   });
 });
