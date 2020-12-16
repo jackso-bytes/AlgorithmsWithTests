@@ -17,8 +17,11 @@ const fn = (num, arr) => {
   return -1;
 };
 
+const recursiveBin = (num, arr) => {};
+
 module.exports = {
   f: fn,
+  f2: recursiveBin,
   i1: size1,
   i2: size3,
   i3: size4,
