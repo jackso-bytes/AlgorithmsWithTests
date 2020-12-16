@@ -29,8 +29,9 @@ class Discount {
   applyDiscount(price, quantity, discount) {
     if (discount === "2 for 45") {
       if (quantity === 1) return price;
-      if (quantity % 2 === 0) {
-        price = (quantity / 2) * 45;
+      if (quantity % 2 !== quantity) {
+        let remain = quantity % 2;
+        price = Math.floor(quantity / 2) * 45 + remain * price;
         return price;
       } else {
         price = price * quantity;
@@ -40,8 +41,9 @@ class Discount {
 
     if (discount === "3 for 100") {
       if (quantity === 1) return price;
-      if (quantity % 3 === 0) {
-        price = (quantity / 3) * 100;
+      if (quantity % 3 !== quantity) {
+        let remain = quantity % 3;
+        price = Math.floor(quantity / 3) * 100 + remain * 50;
         return price;
       } else {
         price = price * quantity;
