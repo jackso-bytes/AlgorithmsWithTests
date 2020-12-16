@@ -11,6 +11,9 @@ describe("#Main", () => {
     expect(methods.main("hello world")).toBe(
       "You must call #main with an array of objects"
     );
+    expect(methods.main(true)).toBe(
+      "You must call #main with an array of objects"
+    );
     expect(methods.main({})).toBe(
       "You must call #main with an array of objects"
     );

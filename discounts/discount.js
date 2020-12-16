@@ -5,7 +5,13 @@ let testCase1 = [
 ];
 
 class Discount {
-  main() {}
+  main(input) {
+    if (Array.isArray(input) !== true) {
+      return "You must call #main with an array of objects";
+    }
+    if (input[0] === undefined)
+      return "You must call #main with an array of objects";
+  }
 
   getPrice(price) {
     return price;
