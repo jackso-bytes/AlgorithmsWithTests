@@ -17,6 +17,6 @@ class Discount {
 }
 
 module.exports = {
-  C: discount,
+  C: Discount,
   i: testCase1,
 };

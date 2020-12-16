@@ -2,7 +2,7 @@ const imports = require("./discount");
 const { C, i } = imports;
 
 describe("#Main", () => {
-  const methods = new c();
+  const methods = new C();
 
   test("return null if not passed array of objects", () => {
     expect(methods.main(1)).toBe(
@@ -25,8 +25,8 @@ describe("#Main", () => {
 });
 
 describe("#getPrice", () => {
+  const methods = new C();
   test("return null if passed an invalid input", () => {
-    const methods = new C();
     expect(methods.getPrice("hello world")).toBe(null);
     expect(methods.getPrice(["£20", "£30"])).toBe(null);
     expect(methods.getPrice(30)).toBe(null);
