@@ -36,7 +36,7 @@ describe("#getPrice", () => {
     expect(methods.getPrice({ key: "£20" })).toBe(null);
   });
 
-  test("returns correct value as a integer", () => {
+  test("returns correct value as a float", () => {
     expect(methods.getPrice("£30")).toBe(30);
   });
 });

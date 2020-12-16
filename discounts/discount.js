@@ -11,10 +11,16 @@ class Discount {
     }
     if (input[0] === undefined)
       return "You must call #main with an array of objects";
+
+    let priceFl = getPrice(input.price);
   }
 
   getPrice(price) {
-    return price;
+    if (typeof price !== "string") return null;
+    let regex = /\d/g;
+    if (regex.test(price) !== true) return null;
+    let p = price.split("£")[1];
+    return parseFloat(p);
   }
 
   applyDiscount(price, quantity, discount) {
