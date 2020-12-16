@@ -54,9 +54,11 @@ describe("tests for #applyDiscount", () => {
     expect(methods.applyDiscount(50, 2, "2 for 45")).toBe(45);
     expect(methods.applyDiscount(50, 1, "2 for 45")).toBe(50);
     expect(methods.applyDiscount(50, 0, "2 for 45")).toBe(0);
+    expect(methods.applyDiscount(50, 4, "2 for 45")).toBe(90);
 
     expect(methods.applyDiscount(50, 3, "3 for 100")).toBe(100);
     expect(methods.applyDiscount(50, 1, "3 for 100")).toBe(50);
     expect(methods.applyDiscount(50, 0, "3 for 100")).toBe(0);
+    expect(methods.applyDiscount(50, 6, "3 for 100")).toBe(200);
   });
 });
