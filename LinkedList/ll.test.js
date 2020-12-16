@@ -113,13 +113,11 @@ describe("#getByIndex", () => {
 
     test("if index 0 passed call deleteAtHead for efficiency", () => {
       const ll = LinkedList.fromValues(10, 20, 30, 40);
-
       ll.deleteAtIndex(0);
 
       expect(ll.length).toBe(3);
       expect(ll.head.value).toBe(20);
       expect(ll.head.next.value).toBe(30);
-      expect(ll.deleteAtHead.toHaveBeenCalledTimes(1));
     });
   });
 

@@ -31,6 +31,7 @@ class LinkedList {
 
   deleteAtIndex(index) {
     if (index < 0 || index > this.length - 1) return null;
+    if (index === 0) return this.deleteAtHead();
     let previous = this.getByIndex(index - 1);
     let current = previous.next;
 
