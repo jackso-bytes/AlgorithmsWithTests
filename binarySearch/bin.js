@@ -17,7 +17,17 @@ const fn = (num, arr) => {
   return -1;
 };
 
-const recursiveBin = (num, arr) => {};
+const recursiveBin = (num, arr) => {
+  if (arr.length === 0) return -1;
+  let mid = Math.floor(arr.length - 1 / 2);
+  // base case
+  if (arr.length === 1 && arr[0] != num) {
+    return -1;
+  }
+  if (arr[mid] === num) return mid;
+  if (arr[mid] > num) return recursiveBin(num, arr.slice(0, mid));
+  if (arr[mid] < num) return recursiveBin(num, arr.slice(mid));
+};
 
 module.exports = {
   f: fn,
