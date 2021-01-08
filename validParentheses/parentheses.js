@@ -25,7 +25,6 @@ const vp = (inp) => {
       return false;
     }
   }
-
   return true;
 };
 

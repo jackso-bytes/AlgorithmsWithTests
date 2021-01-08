@@ -28,4 +28,10 @@ describe("test suite for false cases", () => {
   test("return false when passed junk string that happens to have parentheses", () => {
     expect(inp.f("hello[]hsduhsd")).toBe(false);
   });
+  test("return false when passed unclosed parentheses", () => {
+    expect(inp.f("{[(")).toBe(false);
+  });
+  test("return false when we start with a closing parentheses", () => {
+    expect(inp.f("}")).toBe(false);
+  });
 });
