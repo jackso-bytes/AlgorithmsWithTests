@@ -18,10 +18,10 @@ const vp = (inp) => {
     "{": "}",
   };
 
-  for (let i = 0; i < inp.length; i++) {
-    if (vp[inp[i]]) {
-      stack.push(inp[i]);
-    } else if (vp[stack.pop()] !== inp[i]) {
+  for (char of inp) {
+    if (vp[char]) {
+      stack.push(char);
+    } else if (vp[stack.pop()] !== char) {
       return false;
     }
   }
