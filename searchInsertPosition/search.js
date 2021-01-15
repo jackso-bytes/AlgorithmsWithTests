@@ -1,5 +1,7 @@
-const f = () => {};
+const f = () => {
+  return null;
+};
 
-modules.exports = {
+module.exports = {
   f: f,
 };

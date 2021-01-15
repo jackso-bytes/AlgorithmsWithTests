@@ -1,11 +1,12 @@
-const f = require("./search");
+const imp = require("./search");
+const { f } = imp;
 
 describe("pass cases", () => {
-  test("if no found return index", () => {
+  test("if num found return correct index", () => {
     expect(f(1, [1, 2, 3, 7, 10])).toBe(0);
   });
 
-  test("if no not found return index", () => {
+  test("if num not found return index where it should be", () => {
     expect(f(5, [1, 2, 4, 6, 100])).toBe(3);
   });
 });
@@ -15,5 +16,3 @@ describe("fail cases", () => {
     expect(f(["strings", true, 100], false)).toBe(null);
   });
 });
-
-describe("edge cases", () => {});
