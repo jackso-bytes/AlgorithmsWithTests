@@ -4,9 +4,6 @@ describe("test suite for true cases", () => {
   test("return true when passed a set of mixed parentheses closed in the correct order", () => {
     expect(inp.f("[{()}]")).toBe(true);
   });
-  test("return true passed an empty string", () => {
-    expect(inp.f("")).toBe(true);
-  });
 });
 
 describe("test suite for false cases", () => {

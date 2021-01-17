@@ -1,5 +1,5 @@
-const f = () => {
-  return null;
+const f = (target, arr) => {
+  if (typeof arr !== "object" || typeof target !== "number") return null;
 };
 
 module.exports = {

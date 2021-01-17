@@ -1,7 +1,8 @@
 const vp = (inp) => {
   //handle edge case that we're passed something that isn't a str
   if (typeof inp !== "string") {
-    return false;
+    if (inp.length) return false;
+    return true;
   } else if (
     inp.includes("{") === false &&
     inp.includes("(") === false &&
