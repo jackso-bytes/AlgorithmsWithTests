@@ -6,14 +6,9 @@ const f = (target, arr) => {
 
   while (left <= right) {
     let mid = Math.floor((left + right) / 2);
-    let midval = arr[mid];
-    if (target === midval) {
-      return mid;
-    } else if (target > midval) {
-      left = mid + 1;
-    } else {
-      right = mid - 1;
-    }
+    if (target === arr[mid]) return mid;
+    if (target > arr[mid]) left = mid + 1;
+    if (target < arr[mid]) right = mid - 1;
   }
   return left;
 };
