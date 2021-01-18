@@ -6,8 +6,8 @@ describe("pass cases", () => {
     expect(f(1, [1, 2, 3, 7, 10])).toBe(0);
   });
 
-  test("if num not found return index where it should be", () => {
-    expect(f(5, [1, 2, 4, 6, 100])).toBe(3);
+  test("if num not found return correct index", () => {
+    expect(f(4, [1, 2, 3, 7, 10])).toBe(3);
   });
 });
 
