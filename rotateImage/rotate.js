@@ -6,8 +6,8 @@ let arr = [
 
 const f = (arr) => {
   arr.reverse();
-  arr.forEach((element, index) => {
-    for (let i = index + 1; i < element.length; i++) {
+  arr.forEach((elem, index) => {
+    for (let i = index + 1; i < elem.length; i++) {
       let store = arr[index][i];
       arr[index][i] = arr[i][index];
       arr[i][index] = store;
